@@ -1,14 +1,14 @@
 .navbar {
   position: sticky;
   top: 0px;
-  z-index: 1000;
+  z-index: 10;
 }
 
 .user-name {
   color: #484848;
 }
 
-.fab {
+.create-post-btn {
   width: 20vw;
   background-color: rgb(255, 255, 255);
   border: 0.5px solid rgb(177, 177, 177);

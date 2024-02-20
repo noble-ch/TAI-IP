@@ -15,6 +15,7 @@ import { getuser } from "../actions/auth_actions";
 import { getPosts } from "../actions/posts_action";
 import LeftSidebar from "../containers/leftSidebar";
 
+
 class App extends Component {
   state = {
     loadPosts: true,

@@ -11,7 +11,7 @@ import AppBar from "@material-ui/core/AppBar";
 import { getUserPosts } from "../actions/posts_action";
 import UserCard from "./userCard";
 import Home from "./home";
-
+import PostsContainer from './postsContainer'
 const useStyles = makeStyles(() => ({
   appBar: {
     position: "fixed",
@@ -76,9 +76,10 @@ function UserInfo({ open, close, user, getUserPosts, userPostsReducer }) {
           </div>
         </Toolbar>
       </AppBar>
+ 
       <UserCard user={user} />
       <div className={classes.userPosts}>
-        <Home loadPosts={loadPosts} posts={userPostsReducer} />
+        <PostsContainer loadPosts={loadPosts} posts={userPostsReducer} />
       </div>
     </Dialog>
   );

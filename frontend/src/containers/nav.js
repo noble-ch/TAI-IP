@@ -115,10 +115,7 @@ class Nav extends Component {
       return (
         <ul className="navbar-nav ml-auto">
           <button
-            className="fab"
-            color="secondary"
-            size="small"
-            aria-label="delete"
+            className="create-post-btn"
             style={{ marginRight: 8 }}
             onClick={this.onOpenModal}
           >

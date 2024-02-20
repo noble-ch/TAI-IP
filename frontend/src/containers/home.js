@@ -181,15 +181,14 @@ class Home extends Component {
           <CardActions>
             <Likes post={post} userId={this.props.authReducer.user.id} />
 
-            <Button
+            <button
               variant="contained"
-              size="small"
-              color="primary"
-              className={classes.cardActionLeft}
+              className="post-btns "
               onClick={() => this.onOpenComments(post.id)}
             >
+              <i class="fa-solid fa-comment-dots">&nbsp;</i>
               Comment({post.comments_count})
-            </Button>
+            </button>
             {this.renderOwnerBtn(post)}
           </CardActions>
         </Card>
@@ -201,23 +200,25 @@ class Home extends Component {
     if (this.props.authReducer.user.id == post.owner.id) {
       return (
         <div>
-          <Fab
+          <button
+            className="post-btns"
             style={{ marginRight: 5 }}
             color="primary"
             size="small"
             aria-label="edit"
             onClick={(e) => this.onEditePost(post.content, post.title, post.id)}
           >
-            <EditIcon />
-          </Fab>
-          <Fab
+            | &nbsp;&nbsp;&nbsp;<i class="fa-solid fa-pen"></i> edit
+          </button>
+          <button
+            className="post-btns"
             onClick={(e) => this.onDeletePost(post.title, post.id)}
             color="secondary"
             size="small"
             aria-label="delete"
           >
-            <DeleteIcon />
-          </Fab>
+            | &nbsp;&nbsp;&nbsp;<i class="fa-solid fa-trash"></i> delete
+          </button>
         </div>
       );
     } else {

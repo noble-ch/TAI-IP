@@ -24,7 +24,6 @@ import CommentModal from "../components/comments/commentModal";
 import Likes from "./post_likes";
 import { loadPage } from "../actions/posts_action";
 import UserInfo from "./anyUserInfo";
-import LeftSidebar from "./leftSidebar";
 import "./home.css";
 
 const useStyles = (theme) => ({
@@ -91,7 +90,7 @@ class Home extends Component {
     }
     return (
       <div className={classes.pc}>
-        <div className="main-post-page align-md-center">
+        <div className="main-post-page-pc align-md-center">
           {" "}
           <UserInfo
             open={userInfoOpen}
@@ -182,8 +181,8 @@ class Home extends Component {
             <Button
               variant="contained"
               size="small"
+              className="comment-btn"
               color="primary"
-              className={classes.cardActionLeft}
               onClick={() => this.onOpenComments(post.id)}
             >
               Comment({post.comments_count})
