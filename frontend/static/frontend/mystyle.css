@@ -29,6 +29,10 @@ html {
   --user-hr: #666666;
   --user-ei: #686868;
   --kk: #979797;
+  --primary: #000;
+  --secondary: #3e3e3e;
+  --tertiary: #707070;
+  --quaternary: #b8b8b8;
 }
 
 body {
@@ -49,26 +53,7 @@ body {
   width: 100vw;
   background: #ffffff;
 }
-.fab {
-  width: 400px;
-  background-color: rgb(255, 255, 255);
-  border: 0.5px solid rgb(177, 177, 177);
-  border-radius: 20px;
-  text-align: start;
-  padding-left: 20px;
-  color: #525252;
-  cursor: text;
-  
-}
-.nav-item a {
-  color: rgb(120, 145, 143) !important;
-  font-size: 14px !important;
-  
-}
 
-.nav-item a:hover {
-  color: rgb(3, 37, 35) !important;
-}
 
 /******************************************
                 LOGIN
@@ -824,4 +809,8 @@ body {
     right: calc(50% - 125px);
     left: calc(50% - 125px);
   }
+}
+
+.bred {
+  border: solid red;
 }

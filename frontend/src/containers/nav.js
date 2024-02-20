@@ -2,9 +2,8 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { logout } from "../actions/auth_actions";
-import AddIcon from "@material-ui/icons/Add";
-import Fab from "@material-ui/core/Fab";
 import AddModal from "../components/addModal";
+import "./nav.css";
 
 class Nav extends Component {
   render() {
@@ -18,7 +17,7 @@ class Nav extends Component {
           user={user}
           close={() => this.setState({ open: false })}
         />
-        <div className="container user-info-box-inner">
+        <div className=" user-info-box-inner">
           <div className="user-info-header">
             <div className="user-image-wrap">
               <img src={user.profile.image_path} className="user-image" />
@@ -93,7 +92,7 @@ class Nav extends Component {
 
   render() {
     return (
-      <nav className="navbar navbar-expand navbar-light custom-nav">
+      <nav className="navbar  navbar-expand navbar-light custom-nav">
         <AddModal open={this.state.open} onClose={this.handleModal} />
         <div className="container">
           <a className="navbar-brand" href="#">

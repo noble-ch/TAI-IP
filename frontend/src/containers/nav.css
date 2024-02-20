@@ -1,0 +1,29 @@
+.navbar {
+  position: sticky;
+  top: 0px;
+  z-index: 1000;
+}
+
+.user-name {
+  color: #484848;
+}
+
+.fab {
+  width: 20vw;
+  background-color: rgb(255, 255, 255);
+  border: 0.5px solid rgb(177, 177, 177);
+  border-radius: 20px;
+  text-align: start;
+  padding-left: 20px;
+  color: var(--quaternary);
+  cursor: text;
+  flex-wrap: wrap;
+}
+.nav-item a {
+  color: rgb(120, 145, 143) !important;
+  font-size: 14px !important;
+}
+
+.nav-item a:hover {
+  color: rgb(3, 37, 35) !important;
+}

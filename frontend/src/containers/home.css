@@ -1,0 +1,13 @@
+@media (min-width: 768px) and (max-width: 991px) {
+  .main-post-page {
+    margin-left: 0px !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .main-post-page {
+    margin-left: 20% !important;
+  }
+}
+.main-post-page {
+}
