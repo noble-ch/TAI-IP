@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import "./home.css";
 
 import { closeAlert } from "../actions";
 export class Alerts extends Component {
@@ -7,7 +8,7 @@ export class Alerts extends Component {
     if (!preProps.alertReducer.type) {
       setTimeout(() => {
         this.props.closeAlert();
-      }, 8000);
+      }, 5000);
     }
   }
 
@@ -15,7 +16,7 @@ export class Alerts extends Component {
     const { alertReducer, closeAlert } = this.props;
     if (alertReducer.type === "success") {
       return (
-        <div  className="alert success-alert animated flash">
+        <div className="alert success-alert animated flash">
           <div className="float-right point-effect" onClick={closeAlert}>
             <i className="fa fa-close"></i>
           </div>
@@ -32,7 +33,7 @@ export class Alerts extends Component {
         </div>
       );
     }
-    return <div > </div>;
+    return <div> </div>;
   }
 }
 

@@ -29,8 +29,8 @@ class LeftSidebar extends Component {
               <div className="">
                 <Link
                   style={{
-                    height: "100px",
-                    width: "100px",
+                    height: "120px",
+                    width: "120px",
                     borderRadius: "50%",
                     padding: "0px",
                   }}
@@ -38,8 +38,8 @@ class LeftSidebar extends Component {
                   to="/user-info"
                 >
                   <img
-                    height={"100px"}
-                    width={"100px"}
+                    height={"120px"}
+                    width={"120px"}
                     style={{ borderRadius: "50%" }}
                     src={user.profile.image_path}
                     className="profile-setting-img"
@@ -57,20 +57,7 @@ class LeftSidebar extends Component {
         </div>
       );
     } else {
-      return (
-        <div className="navbar-nav ml-auto">
-          <div className="nav-item">
-            <Link className="nav-link" to="/login">
-              Login
-            </Link>
-          </div>
-          <div className="nav-item">
-            <Link className="nav-link" to="/register">
-              Register
-            </Link>
-          </div>
-        </div>
-      );
+      return <div className="navbar-nav ml-auto"></div>;
     }
   }
 }

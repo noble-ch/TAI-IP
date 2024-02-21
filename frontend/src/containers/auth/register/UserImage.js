@@ -13,7 +13,6 @@ export class UserImage extends Component {
             <Fragment>
                 <div className="form-box ">
                     <form encType="multipart/form-data"
-                        encType="multipart/form-data"
                         onSubmit={handleSubmit(onFormSubmit)}
                         className="animated wow fadeIn">
                         

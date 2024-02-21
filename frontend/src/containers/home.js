@@ -153,7 +153,7 @@ class Home extends Component {
       const p_date = moment(post.p_date).format("MM/DD/YYYY ,HH:mm");
       const u_date = moment(post.u_date).format("DD/MM/YYYY ,HH:mm");
       return (
-        <Card key={post.id} className={classes.card}>
+        <Card key={post.id} className={classes.card + " post-card"}>
           <CardHeader
             className={classes.cardHeader}
             onClick={() => this.getUserInfo(post)}
@@ -167,11 +167,20 @@ class Home extends Component {
             title={<h4>{post.owner.username}</h4>}
             subheader={p_date}
           />
+
           <CardContent className={classes.cardContent}>
-            <Typography variant="h6" color="textPrimary" component="h6">
+            <Typography
+              style={{
+                borderTop: "0.5px solid var(--quaternary)",
+                paddingTop: "10px",
+              }}
+              variant="h6"
+              color="textPrimary"
+              component="h6"
+            >
               {post.title}
             </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
+            <Typography className="post-detail" variant="body2" component="i">
               {post.content}
             </Typography>
             <Typography variant="overline" color="textPrimary" component="p">
@@ -186,7 +195,7 @@ class Home extends Component {
               className="post-btns "
               onClick={() => this.onOpenComments(post.id)}
             >
-              <i class="fa-solid fa-comment-dots">&nbsp;</i>
+              | &nbsp;&nbsp;&nbsp;<i class="fa-solid fa-comment-dots">&nbsp;</i>
               Comment({post.comments_count})
             </button>
             {this.renderOwnerBtn(post)}
@@ -211,7 +220,7 @@ class Home extends Component {
             | &nbsp;&nbsp;&nbsp;<i class="fa-solid fa-pen"></i> edit
           </button>
           <button
-            className="post-btns"
+            className="post-btns dlt-btn"
             onClick={(e) => this.onDeletePost(post.title, post.id)}
             color="secondary"
             size="small"

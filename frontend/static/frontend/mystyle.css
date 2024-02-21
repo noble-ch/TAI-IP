@@ -23,16 +23,22 @@ html {
 
 :root {
   --user-bg: linear-gradient(to right, #ff758c 0%, #ff7eb3 100%);
-  --user-bg2: linear-gradient(to right, #f0f0f0 0%, #ebebeb 100%);
+  --user-bg2: linear-gradient(to right, #e8eff0 0%, #e8eff0 100%);
   --body-bg: linear-gradient(to top, #494949 0%, #3b3b3b 100%);
   --user-br: rgb(255, 255, 255);
-  --user-hr: #666666;
-  --user-ei: #686868;
-  --kk: #979797;
+  /* --user-hr: #ffffff; */
+  /* --user-ei: #ffffff00; */
+  --kk: #ffffff00;
   --primary: #000;
-  --secondary: #3e3e3e;
-  --tertiary: #707070;
-  --quaternary: #b8b8b8;
+  --bg-white: #ffffff;
+  --secondary: #373f41;
+  --tertiary: #5f6c6e;
+  --quaternary: #a4b6bd;
+  --buttons: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.8),
+    rgba(0, 0, 0, 0.8)
+  );
 }
 
 body {
@@ -53,7 +59,6 @@ body {
   width: 100vw;
   background: #ffffff;
 }
-
 
 /******************************************
                 LOGIN
@@ -362,12 +367,12 @@ body {
 *******************************************/
 .error-alert {
   background-color: #f7b0b0;
-  color: #960b0b;
+  color: #750505;
 }
 
 .success-alert {
   background-color: #a7e68a;
-  color: #065c55;
+  color: #044742;
 }
 
 .alert {
@@ -485,11 +490,11 @@ body {
 }
 
 .user-information:hover {
-  background-color: var(--user-hr);
+  background: rgb(235, 237, 238);
 }
 
 .user-information:hover .edit-icon {
-  background-color: var(--user-hr);
+  background: none;
   visibility: visible;
   animation: show 500ms ease-in;
 }
@@ -499,15 +504,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--user-hr);
-  border: 2px solid var(--user-br);
-  border-radius: 6px;
+  /* height: 46px; */
 }
 
 .user-info-input {
-  padding: 10px;
+  padding: 8px;
   background-color: var(--user-hr);
-  font-size: 24px;
   width: 100%;
   height: 100%;
   border: none;
@@ -516,13 +518,11 @@ body {
 
 .user-info-input-slelect {
   padding: 10px;
-  background-color: #fff;
-  font-size: 24px;
+  background-color: var(--user-hr);
   width: 100%;
   height: 100%;
   border: none;
   outline: none;
-  border-radius: 4px;
   cursor: pointer;
   margin: 0;
   text-align: center;
@@ -532,7 +532,7 @@ body {
   padding: 0px;
   background-color: var(--user-hr);
   border-bottom: 1px solid #fff;
-  font-size: 24px;
+  font-size: 12px;
   width: 100%;
   height: 100%;
   border: none;
@@ -586,7 +586,7 @@ body {
   justify-content: center;
   align-items: center;
   background-image: var(--user-bg2);
-  border: 2px solid var(--user-hr);
+
   padding: 1rem;
 }
 
@@ -676,7 +676,7 @@ body {
 .animate-page i {
   font-size: 150px;
   animation: spin 1000ms infinite linear;
-  background-color: var(--user-hr);
+
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -685,7 +685,7 @@ body {
 .charging {
   width: 60%;
   height: 5px;
-  background-color: var(--user-hr);
+
   animation: charge 950ms ease-in infinite;
   transform-origin: left;
   margin-top: 30px;

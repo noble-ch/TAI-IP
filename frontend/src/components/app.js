@@ -15,7 +15,6 @@ import { getuser } from "../actions/auth_actions";
 import { getPosts } from "../actions/posts_action";
 import LeftSidebar from "../containers/leftSidebar";
 
-
 class App extends Component {
   state = {
     loadPosts: true,
@@ -35,6 +34,7 @@ class App extends Component {
       <div className="main2">
         <HashRouter>
           {/* <ColorChanger /> */}
+
           <Nav />
           {/* <LeftSidebar /> */}
           <Alerts />
@@ -46,6 +46,7 @@ class App extends Component {
               loadPosts={this.state.loadPosts}
               component={Home}
             />
+
             <Route exact path="/login" component={Login} />
             <Route exact path="/register" component={Register} />
             <PrivateRoute exact path="/user-info" component={UserInfo} />

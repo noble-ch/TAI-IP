@@ -96,7 +96,7 @@ class Nav extends Component {
         <AddModal open={this.state.open} onClose={this.handleModal} />
         <div className="container">
           <a className="navbar-brand" href="#">
-            ChatChita
+            NobaLink.
           </a>
           <div className="collapse navbar-collapse">
             {this.renderLeftLinks()}

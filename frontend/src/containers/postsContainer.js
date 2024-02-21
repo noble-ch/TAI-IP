@@ -24,6 +24,7 @@ import CommentModal from "../components/comments/commentModal";
 import Likes from "./post_likes";
 import { loadPage } from "../actions/posts_action";
 import UserInfo from "./anyUserInfo";
+import LeftSidebar from "./leftSidebar";
 import "./home.css";
 
 const useStyles = (theme) => ({
@@ -90,7 +91,9 @@ class Home extends Component {
     }
     return (
       <div className={classes.pc}>
-        <div className="main-post-page-pc align-md-center">
+        {/* <LeftSidebar /> */}
+
+        <div className="msain-post-page align-md-center">
           {" "}
           <UserInfo
             open={userInfoOpen}
@@ -150,7 +153,7 @@ class Home extends Component {
       const p_date = moment(post.p_date).format("MM/DD/YYYY ,HH:mm");
       const u_date = moment(post.u_date).format("DD/MM/YYYY ,HH:mm");
       return (
-        <Card key={post.id} className={classes.card}>
+        <Card key={post.id} className={classes.card + " post-cardd"}>
           <CardHeader
             className={classes.cardHeader}
             onClick={() => this.getUserInfo(post)}
@@ -164,11 +167,20 @@ class Home extends Component {
             title={<h4>{post.owner.username}</h4>}
             subheader={p_date}
           />
+
           <CardContent className={classes.cardContent}>
-            <Typography variant="h6" color="textPrimary" component="h6">
+            <Typography
+              style={{
+                borderTop: "0.5px solid var(--quaternary)",
+                paddingTop: "10px",
+              }}
+              variant="h6"
+              color="textPrimary"
+              component="h6"
+            >
               {post.title}
             </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
+            <Typography className="post-detail" variant="body2" component="i">
               {post.content}
             </Typography>
             <Typography variant="overline" color="textPrimary" component="p">
@@ -178,15 +190,14 @@ class Home extends Component {
           <CardActions>
             <Likes post={post} userId={this.props.authReducer.user.id} />
 
-            <Button
+            <button
               variant="contained"
-              size="small"
-              className="comment-btn"
-              color="primary"
+              className="post-btns "
               onClick={() => this.onOpenComments(post.id)}
             >
+              | &nbsp;&nbsp;&nbsp;<i class="fa-solid fa-comment-dots">&nbsp;</i>
               Comment({post.comments_count})
-            </Button>
+            </button>
             {this.renderOwnerBtn(post)}
           </CardActions>
         </Card>
@@ -198,23 +209,25 @@ class Home extends Component {
     if (this.props.authReducer.user.id == post.owner.id) {
       return (
         <div>
-          <Fab
+          <button
+            className="post-btns"
             style={{ marginRight: 5 }}
             color="primary"
             size="small"
             aria-label="edit"
             onClick={(e) => this.onEditePost(post.content, post.title, post.id)}
           >
-            <EditIcon />
-          </Fab>
-          <Fab
+            | &nbsp;&nbsp;&nbsp;<i class="fa-solid fa-pen"></i> edit
+          </button>
+          <button
+            className="post-btns dlt-btn"
             onClick={(e) => this.onDeletePost(post.title, post.id)}
             color="secondary"
             size="small"
             aria-label="delete"
           >
-            <DeleteIcon />
-          </Fab>
+            | &nbsp;&nbsp;&nbsp;<i class="fa-solid fa-trash"></i> delete
+          </button>
         </div>
       );
     } else {

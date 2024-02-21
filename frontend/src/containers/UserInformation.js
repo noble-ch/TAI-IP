@@ -9,6 +9,7 @@ import AnimatePage from "../components/AnimatePage";
 import UserPost from "./anyUserInfo";
 import { updateUserInfo } from "../actions/index";
 import { updateUserImage } from "../actions/index";
+import "./home.css";
 
 export class UserInfo extends Component {
   constructor(props) {
@@ -111,7 +112,7 @@ export class UserInfo extends Component {
             />
             <div>
               <button
-                className="btn btn-secondary mt-2 mr-3"
+                className="btn btn-secondary mt-2 mr-3 text-dark"
                 onClick={this.closeModul.bind(this)}
               >
                 cancel
@@ -135,10 +136,10 @@ export class UserInfo extends Component {
     return _.map(this.state.user, (info) => {
       if (info.edit && info.id === "sex") {
         return (
-          <div>
+          <div className="">
             <div className="user-info-input-wrap">
               <p
-                className="user-info-input-slelect"
+                className="user-info-input-select"
                 value="male"
                 onClick={this.onClose}
               >
