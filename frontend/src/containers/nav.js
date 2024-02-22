@@ -116,7 +116,7 @@ class Nav extends Component {
         <ul className="navbar-nav ml-auto">
           <button
             className="create-post-btn"
-            style={{ marginRight: 8 }}
+            style={{ margin: "10px 10px", height: "30px" }}
             onClick={this.onOpenModal}
           >
             Create a Post
@@ -125,8 +125,8 @@ class Nav extends Component {
           <li className="nav-item">
             <Link
               style={{
-                height: "35px",
-                width: "35px",
+                height: "46px",
+                width: "46px",
                 borderRadius: "50%",
                 margin: "0px",
                 padding: "0px",
@@ -136,8 +136,8 @@ class Nav extends Component {
             >
               {/* {username} */}
               <img
-                height={"35px"}
-                width={"35px"}
+                height={"45px"}
+                width={"45px"}
                 style={{ borderRadius: "50%" }}
                 src={user.profile.image_path}
                 className="profile-setting-img"
@@ -145,13 +145,14 @@ class Nav extends Component {
             </Link>
           </li>
           <li className="nav-item" style={{ margin: "auto 0" }}>
-            <button
+            <p
+              style={{ margin: "0 10px", height: "30px", cursor: "pointer" }}
               onClick={this.props.logout}
-              className="btn btn-sm btn-outline-danger ml-2"
+              className=" btn-sm btn-outline-danger ml-2"
               to="/"
             >
               Logout
-            </button>
+            </p>
           </li>
         </ul>
       );
@@ -159,13 +160,13 @@ class Nav extends Component {
       return (
         <ul className="navbar-nav ml-auto">
           <li className="nav-item">
-            <Link className="nav-link" to="/login">
-              Login
+            <Link className="nav-link log-text" to="/login">
+              <p className="login">Login</p>
             </Link>
           </li>
           <li className="nav-item">
             <Link className="nav-link" to="/register">
-              Register
+              <p>Register</p>
             </Link>
           </li>
         </ul>

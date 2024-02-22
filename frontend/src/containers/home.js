@@ -11,13 +11,10 @@ import CardActions from "@material-ui/core/CardActions";
 import Avatar from "@material-ui/core/Avatar";
 import { Typography } from "@material-ui/core";
 import { withStyles } from "@material-ui/styles";
-import Fab from "@material-ui/core/Fab";
 import Button from "@material-ui/core/Button";
-import DeleteIcon from "@material-ui/icons/Delete";
 import CircularProgress from "@material-ui/core/CircularProgress";
 
 import AnimatePage from "../components/AnimatePage";
-import EditIcon from "@material-ui/icons/Edit";
 import DeleteModal from "../components/deleteModal";
 import EditModal from "../components/editModal";
 import CommentModal from "../components/comments/commentModal";
@@ -26,6 +23,7 @@ import { loadPage } from "../actions/posts_action";
 import UserInfo from "./anyUserInfo";
 import LeftSidebar from "./leftSidebar";
 import "./home.css";
+import Rightsidebar from "./rightsidebar";
 
 const useStyles = (theme) => ({
   avatar: {
@@ -90,11 +88,26 @@ class Home extends Component {
       );
     }
     return (
-      <div className={classes.pc}>
+      <div
+        style={{ display: "flex", justifyContent: "center" }}
+        className={classes.pc + " home"}
+      >
         <LeftSidebar />
+        <img
+          style={{
+            position: "absolute",
+            zIndex: "-10",
+            width: "50%",
+            height: "100%",
 
+            opacity: "1",
+            marginTop: "-10px",
+            float: "right",
+            left: "0",
+          }}
+          src="../../../media/img/—Pngtree—geometric shapes sets with multi_3652063.png"
+        ></img>{" "}
         <div className="main-post-page align-md-center">
-          {" "}
           <UserInfo
             open={userInfoOpen}
             close={this.closeUserInfo}
@@ -137,6 +150,7 @@ class Home extends Component {
             </div>
           </Container>
         </div>
+        <Rightsidebar />
       </div>
     );
   }

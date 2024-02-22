@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import "./leftSidebar.css";
+import "./sideBar.css";
 import UserInfo from "./auth/register/UserInfo";
 import { getUserPosts } from "../actions/posts_action";
 
@@ -24,7 +24,7 @@ class LeftSidebar extends Component {
     if (isAuthenticated) {
       return (
         <div className="left-sidebar navbar-expand navbar-light custom-nav d-none d-lg-flex">
-          <div className="container">
+          <div className="left-user-container">
             <div className="user-info-sb">
               <div className="">
                 <Link
@@ -53,6 +53,15 @@ class LeftSidebar extends Component {
                 <p className="mail">{user.email}</p>
               </div>
             </div>
+          </div>
+          <div className="footer">
+            {" "}
+            <p>
+              About . Accessibility . Help . Center . Privacy & Terms . Ad
+              Choices . Advertising . Business . Services . Get the NobaLink app
+              More .
+            </p>
+            <p>NobaLink Corporation © 2024</p>
           </div>
         </div>
       );

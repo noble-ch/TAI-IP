@@ -1,0 +1,164 @@
+/* @media (max-width: 1000px) {
+  .login-page-content {
+    width: 60%;
+  }
+
+  .gender-radio {
+    width: 127px;
+    height: 127px;
+  }
+}
+
+@media (max-width: 600px) {
+  .register-page-photo {
+    display: none;
+  }
+
+  .register-page-content {
+    display: block;
+  }
+
+  .login-page-content {
+    width: 95%;
+  }
+
+  .alert {
+    width: 300px;
+    right: calc(50% - 150px);
+    left: calc(50% - 150px);
+  }
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 14px;
+  }
+
+  .user-info-main {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .module-inner {
+    width: 80vw;
+    height: 60vh;
+  }
+
+  .login-page-content {
+    width: 95%;
+  }
+
+  .btn-general {
+    padding: 10px 40px 10px 40px;
+    border-radius: 0;
+  }
+
+  .gender-radio {
+    width: 115px;
+    height: 115px;
+  }
+
+  .alert {
+    width: 250px;
+    right: calc(50% - 125px);
+    left: calc(50% - 125px);
+  }
+} */
+
+/* -------------XS screen Type-------------------------------- */
+
+@media (max-width: 575.98px) {
+  body {
+    padding-top: 60px !important;
+  }
+  .form-box {
+    width: 90% !important;
+  }
+  .login-page-content {
+    width: 100% !important;
+  }
+  .user-info-main {
+    width: 100% !important;
+  }
+}
+/* -------------sm screen Type-------------------------------- */
+
+@media (min-width: 576px) and (max-width: 768px) {
+  body {
+    padding-top: 60px !important;
+  }
+  .form-box {
+    width: 80% !important;
+  }
+  .login-page-content {
+    width: 90% !important;
+    height: 40%;
+  }
+  .user-info-main {
+    width: 100% !important;
+  }
+}
+
+/* -------------MD screen Type-------------------------------- */
+@media (min-width: 768px) and (max-width: 991px) {
+  body {
+    padding-top: 60px !important;
+  }
+  .main-post-page {
+    margin-left: 0px !important;
+  }
+  .form-box {
+    width: 80% !important;
+  }
+}
+/* -------------LG  screen Type-------------------------------- */
+@media (min-width: 992px) and (max-width: 1199px) {
+  body {
+    padding-top: 60px !important;
+  }
+  .main-post-page {
+    width: 70% !important;
+  }
+  .post-card {
+    width: 100% !important;
+    margin: 0 auto;
+  }
+  .right-sidebar {
+    display: none !important;
+  }
+
+  .left-sidebar {
+    width: 28% !important;
+  }
+  .form-box {
+    width: 50% !important;
+  }
+  .login-page-content {
+    width: 90% !important;
+    height: 40%;
+  }
+}
+/* -------------xl  screen Type-------------------------------- */
+
+@media (min-width: 1200px) {
+  .main-post-page {
+    width: 60% !important;
+  }
+  .post-card {
+    width: 100% !important;
+    margin: 0 auto;
+  }
+  .left-sidebar {
+    margin-left: 2% !important;
+  }
+  .form-box {
+    width: 40% !important;
+  }
+  .login-page-content {
+    width: 70% !important;
+    height: 40%;
+  }
+}
+
+.charging {
+  background: rgb(27, 66, 116);
+}

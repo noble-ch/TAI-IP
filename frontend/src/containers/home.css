@@ -1,21 +1,6 @@
-@media (min-width: 768px) and (max-width: 991px) {
-  .main-post-page {
-    margin-left: 0px !important;
-  }
-}
-
-@media (min-width: 992px) {
-  .main-post-page {
-    margin-left: 20% !important;
-  }
-  .post-card {
-    width: 80%;
-  }
-}
-
 body {
   background: var(--user-bg2);
-  padding-top: 60px;
+  padding-top: 4%;
 }
 .main-post-page-pc {
 }
@@ -60,6 +45,7 @@ body {
   color: var(--tertiary);
 }
 
+/* --------------------USER INFO---------------------- */
 .container .user-info-box-inner {
 }
 .user-info-header {

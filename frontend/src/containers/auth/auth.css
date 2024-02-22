@@ -7,7 +7,7 @@
 .login-page-form {
   border-radius: 20px !important;
   border: none !important;
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.253);
+  box-shadow: 1px 1px 4px #00000041;
   background: whitesmoke;
 }
 .form-box {
@@ -17,10 +17,10 @@
   background: rgb(245, 245, 245);
   width: 60%;
   margin: 0px auto 0px auto;
+
 }
 .field input {
   border: none !important;
   outline: none;
   border-radius: 20px;
-  border-bottom: solid red;
 }

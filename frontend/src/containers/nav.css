@@ -2,6 +2,10 @@
   position: absolute;
   top: 0px;
   z-index: 10;
+  /* background: linear-gradient(rgb(136, 185, 20), rgb(105, 140, 185)); */
+  background: rgb(55, 84, 122);
+  /* backdrop-filter: blur(10px); */
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.39);
 }
 
 .user-name {
@@ -10,15 +14,20 @@
 
 .create-post-btn {
   width: 20vw;
-  background-color: rgb(255, 255, 255);
-  border: 0.5px solid rgb(177, 177, 177);
+  background-color: rgba(255, 255, 255, 0);
+  border: 0.5px solid rgb(255, 255, 255);
   border-radius: 20px;
   text-align: start;
   padding-left: 20px;
-  color: var(--quaternary);
-  cursor: text;
+  /* color: var(--quaternary); */
+  color: white;
+  cursor: text !important;
   text-wrap: nowrap;
   overflow-x: hidden;
+}
+.create-post-btn:hover {
+  border: solid rgb(198, 215, 217);
+  overflow: hidden;
 }
 .nav-item a {
   color: rgb(120, 145, 143) !important;
@@ -45,4 +54,18 @@
 
 .navbar-brand {
   font-weight: 900;
+  color: #ffffff !important;
+}
+.nav-link p {
+  color: #ffffff !important;
+  font-weight: 500;
+  margin: auto 0;
+  height: 25px;
+}
+
+.nav-link p:hover {
+  border-bottom: 2px solid rgb(255, 255, 255);
+}
+.nav-link p:active {
+  color: #000;
 }

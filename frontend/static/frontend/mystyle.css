@@ -23,11 +23,11 @@ html {
 
 :root {
   --user-bg: linear-gradient(to right, #ff758c 0%, #ff7eb3 100%);
-  --user-bg2: linear-gradient(to right, #e8eff0 0%, #e8eff0 100%);
+  --user-bg2: linear-gradient(to right, #e8ebf0 0%, #e8e9f0 100%);
   --body-bg: linear-gradient(to top, #494949 0%, #3b3b3b 100%);
   --user-br: rgb(255, 255, 255);
-  /* --user-hr: #ffffff; */
-  /* --user-ei: #ffffff00; */
+  --user-hr: #ffffff;
+  --user-ei: #ffffff00;
   --kk: #ffffff00;
   --primary: #000;
   --bg-white: #ffffff;
@@ -745,72 +745,3 @@ body {
 }
 
 /**************** Media Queries ****************/
-@media (max-width: 1000px) {
-  .login-page-content {
-    width: 60%;
-  }
-
-  .gender-radio {
-    width: 127px;
-    height: 127px;
-  }
-}
-
-@media (max-width: 600px) {
-  .register-page-photo {
-    display: none;
-  }
-
-  .register-page-content {
-    display: block;
-  }
-
-  .login-page-content {
-    width: 95%;
-  }
-
-  .alert {
-    width: 300px;
-    right: calc(50% - 150px);
-    left: calc(50% - 150px);
-  }
-}
-
-@media (max-width: 500px) {
-  html {
-    font-size: 14px;
-  }
-
-  .user-info-main {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
-
-  .module-inner {
-    width: 80vw;
-    height: 60vh;
-  }
-
-  .login-page-content {
-    width: 95%;
-  }
-
-  .btn-general {
-    padding: 10px 40px 10px 40px;
-    border-radius: 0;
-  }
-
-  .gender-radio {
-    width: 115px;
-    height: 115px;
-  }
-
-  .alert {
-    width: 250px;
-    right: calc(50% - 125px);
-    left: calc(50% - 125px);
-  }
-}
-
-.bred {
-  border: solid red;
-}
