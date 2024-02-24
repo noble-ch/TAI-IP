@@ -61,7 +61,10 @@ function UserInfo({ open, close, user, getUserPosts, userPostsReducer }) {
       onClose={handleClose}
       TransitionComponent={Transition}
     >
-      <AppBar className={classes.appBar}>
+      <AppBar
+        style={{ background: "rgb(55, 84, 122)" }}
+        className={classes.appBar}
+      >
         <Toolbar>
           <div className={classes.closer}>
             <IconButton

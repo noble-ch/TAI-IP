@@ -21,6 +21,17 @@ class Login extends Component {
     }
     return (
       <div className="login-page">
+        <img
+          style={{
+            position: "absolute",
+            zIndex: "--1",
+            width: "100%",
+            height: "100%",
+            filter: "brightness(0.85)",
+            opacity: "1",
+          }}
+          src="../../../../media/img/socialheartbtn.png"
+        ></img>{" "}
         <AnimatePage />
         <div className="login-page-content">
           <div className="login-page-content-inner">
@@ -61,7 +72,7 @@ class Login extends Component {
                   progress ? { display: "inline-block" } : { display: "none" }
                 }
               />
-              <p className="text-helper">
+              <p className=" my-3 text-helper">
                 Don't have account yet <Link to="/register">here</Link>
               </p>
             </form>

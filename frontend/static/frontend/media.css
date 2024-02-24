@@ -1,4 +1,4 @@
-/* @media (max-width: 1000px) {
+@media (max-width: 1000px) {
   .login-page-content {
     width: 60%;
   }
@@ -62,7 +62,7 @@
     right: calc(50% - 125px);
     left: calc(50% - 125px);
   }
-} */
+}
 
 /* -------------XS screen Type-------------------------------- */
 
@@ -130,10 +130,11 @@
     width: 28% !important;
   }
   .form-box {
-    width: 50% !important;
+    width: 60% !important;
   }
+
   .login-page-content {
-    width: 90% !important;
+    width: 50% !important;
     height: 40%;
   }
 }
@@ -151,10 +152,11 @@
     margin-left: 2% !important;
   }
   .form-box {
-    width: 40% !important;
+    width: 60% !important;
   }
+
   .login-page-content {
-    width: 70% !important;
+    width: 50% !important;
     height: 40%;
   }
 }
