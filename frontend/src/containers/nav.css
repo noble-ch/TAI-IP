@@ -3,7 +3,7 @@
   top: 0px;
   z-index: 10;
   /* background: linear-gradient(rgb(136, 185, 20), rgb(105, 140, 185)); */
-  background: rgb(55, 84, 122);
+  background: rgb(17, 31, 49);
   /* backdrop-filter: blur(10px); */
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.39);
 }
@@ -56,6 +56,12 @@
   font-weight: 900;
   color: #ffffff !important;
 }
+.navbar-brand:hover {
+  font-weight: 900;
+  color: #0084ff !important;
+  transition: 1s ease;
+}
+
 .nav-link p {
   color: #ffffff !important;
   font-weight: 500;

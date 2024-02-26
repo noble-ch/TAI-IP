@@ -46,7 +46,6 @@ export const register = (values ,callBack) => {
                 type : REGISTER,
                 payload : res.data
             })
-            // clear the data from the form
             dispatch(reset('register'))
         }, (err) => {
             dispatch({
@@ -67,7 +66,6 @@ export const logout = () => {
     }
 }  
 
-// helper function ---> set the config and the headers for axios request
 export const setConfig = (getState) =>{
     let config = null;
     const token =  getState().authReducer.token

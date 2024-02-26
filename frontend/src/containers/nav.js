@@ -98,6 +98,7 @@ class Nav extends Component {
           <a className="navbar-brand" href="#">
             NobaLink.
           </a>
+
           <div className="collapse navbar-collapse">
             {this.renderLeftLinks()}
           </div>

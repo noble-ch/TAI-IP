@@ -48,7 +48,6 @@ export const updateUserImage = (values ,user_id ,callBack) => {
     }
 }
 
-// clear data in redux form
 export const clearForm = () => {
     return { type: CLEAR_REDUX_FORM }
 }
